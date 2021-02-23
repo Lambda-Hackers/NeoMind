@@ -44,3 +44,6 @@ color:yellow;
 其它确认：
 文字编码：默认为utf-8
 
+# TODO
+[ ] 支持CSS调整图像格式
+[ ] 支持导出导入markdown
