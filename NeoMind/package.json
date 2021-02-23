@@ -1,0 +1,15 @@
+{
+  "name": "NeoMind",
+  "version": "0.0.0",
+  "description": "cool",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron ."
+  },
+  "keywords": [],
+  "author": "Lambda-Hackers",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^11.3.0"
+  }
+}
