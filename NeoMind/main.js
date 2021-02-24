@@ -1,4 +1,6 @@
-const { app, BrowserWindow, Menu} = require('electron')
+const { app, BrowserWindow} = require('electron')
+const menus = require('./javascript/menu.js')
+
 
 function createWindow () {
   const win = new BrowserWindow({
@@ -14,39 +16,7 @@ function createWindow () {
 
 app.whenReady().then(createWindow)
 
-Menus = [
-  {
-    label:'文件',
-    submenu:[
-      {
-        label: '打开文件',
-        role: 'openFile'
-      },
-      {
-          label: '打开最近',
-      }
-    ]
-  },
-  {
-    label:'帮助',
-    submenu:[
-      {
-        label: '帮助文档',
-        click: function () {
-          electron.shell.openExternal('https://github.com/Lambda-Hackers/NeoMind')
-        }
-      },
-      {
-        label: '加入我们',
-        click: function () {
-          electron.shell.openExternal('https://github.com/Lambda-Hackers/NeoMind')
-        }
-      }
-    ]
-  }
-];
-const mainMenu = Menu.buildFromTemplate(Menus);
-Menu.setApplicationMenu(mainMenu);
+menus.defineMenus();
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
