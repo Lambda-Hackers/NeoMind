@@ -51,3 +51,7 @@ function defineMenus ()
   const mainMenu = Menu.buildFromTemplate(Menus);
   Menu.setApplicationMenu(mainMenu);
 };
+
+Menus.exports = {
+  defineMenus
+}

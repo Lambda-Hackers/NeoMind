@@ -1,5 +1,5 @@
-const { app, BrowserWindow} = require('electron')
-const menus = require('./javascript/menu.js')
+const { app, BrowserWindow } = require('electron')
+const { Menus } = require('./javascript/menu.js')
 
 
 function createWindow () {
@@ -16,7 +16,7 @@ function createWindow () {
 
 app.whenReady().then(createWindow)
 
-menus.defineMenus();
+Menus.defineMenus();
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
